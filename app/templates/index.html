@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block body %}
+    <div class="jumbotron">
+        <h1 class="display-4">Welome home!</h1>
+    </div>
+    <div id="widget-container" class="row">
+
+        {% for widget in widgets %}
+                <div class="card result row d-flex justify-content-center my-2 mx-1">
+                    <div class="card-body">
+                        <div class="card-title">{{ widget['title'] }}</div>
+                        <div class="card-text">{{ widget['body'] }}</div>
+
+                    </div>
+                </div>
+            {% endfor %}
+    </div>
+{% endblock %}
